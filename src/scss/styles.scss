@@ -1,0 +1,38 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+$bg-color: #f0f0f0;
+
+body {
+    background: $bg-color;
+    font-family: 'Raleway';
+}
+
+.title-img {
+    background-image: url("/assets/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 250px;
+    margin: 20px 0;
+}
+
+.title {
+    margin: 20px 0;
+    padding: 0 20px;
+    font-family: 'Lato', 'Raleway';
+    font-size: 48px;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+    padding: 0 20px;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.btn {
+    margin-right: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+    border-radius: 0;
+}

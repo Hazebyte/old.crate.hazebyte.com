@@ -29,10 +29,28 @@ body {
     font-weight: 100;
 }
 
+.nav {
+    padding: 0 5px;
+}
+
 .btn {
     margin-right: 10px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 10px;
     border-radius: 0;
+}
+
+@media screen and (max-width: 400px) {
+    .title-img {
+        height: 150px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
 }

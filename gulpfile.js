@@ -1,6 +1,7 @@
 const gulp = require('gulp')
 const browserSync = require('browser-sync').create()
 const sass = require('gulp-sass')
+const deploy      = require('gulp-gh-pages');
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', () => gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'])
@@ -30,5 +31,9 @@ gulp.task('serve', ['html', 'asset', 'sass'], () => {
     gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'], ['sass'])
     gulp.watch('src/*.html').on('change', browserSync.reload)
 })
+
+gulp.task('deploy', () => gulp.src("./dist/**/*")
+    .pipe(deploy())
+)
 
 gulp.task('default', ['js', 'serve'])

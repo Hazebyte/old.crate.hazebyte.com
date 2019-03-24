@@ -32,7 +32,7 @@ gulp.task('serve', ['html', 'asset', 'sass'], () => {
     gulp.watch('src/*.html').on('change', browserSync.reload)
 })
 
-gulp.task('deploy', () => gulp.src("./dist/**/*")
+gulp.task('deploy', ['html', 'asset', 'sass'], () => gulp.src("./dist/**/*")
     .pipe(deploy())
 )
 
